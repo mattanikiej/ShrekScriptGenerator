@@ -6,5 +6,8 @@ The Shrek Script Generator is a web app aimed entirely to fill you with nostalgi
 ## Features
 The web app takes a title and the first few lines you want Shrek to say, then generates an entire script based on that and the previous movies. The script only shows the first 5000 charactewrs which is about a page.
 
+## How to use
+Simply go to the link here: http://www.shrekscript.com/
+
 ## Authors
 Matt Anikiej
