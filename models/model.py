@@ -24,7 +24,7 @@ class Model(tf.keras.Model):
         self.__create_training_data(100)  # loads self.training_data_
 
         self.embedding_ = tf.keras.layers.Embedding(len(self.tokens_.get_vocabulary()), 256)
-        self.gru_ = tf.keras.layers.GRU(2048,
+        self.gru_ = tf.keras.layers.GRU(1024,
                                         return_sequences=True,
                                         return_state=True)
         self.dense_ = tf.keras.layers.Dense(len(self.tokens_.get_vocabulary()))

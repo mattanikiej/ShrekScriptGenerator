@@ -7,7 +7,7 @@ class ScriptGenerator():
     Class that is used to generate the scripts
     """
     def __init__(self):
-        self.one_step_model = Train().get_one_step()
+        self.one_step_model = Train(load=True, name='V1').get_one_step()
         self.script_title = 'Shrek And The Fool Who Can\'t Read Directions'
         self.first_words = "Get out me swamp!"
 
@@ -25,8 +25,8 @@ class ScriptGenerator():
         next_char = tf.constant([initial_data])
         result = [next_char]
 
-        # generate 5000 characters
-        for n in range(5000):
+        # generate 3000 characters
+        for n in range(3000):
             next_char, states = self.one_step_model.generate_one_step(next_char, states=states)
             result.append(next_char)
 
