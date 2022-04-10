@@ -1,0 +1,24 @@
+
+
+input[type=text] {
+    width:50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+textarea {
+    width: 50%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    resize: none;
+}
+
+input[type=submit]{
+    cursor: pointer;
+    width:20%;
+    height:50px;
+}

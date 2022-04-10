@@ -1,14 +1,32 @@
-import tensorflow as tf
-from train_model import Train
+from flask import Flask, render_template, request, redirect, url_for
+from script_generator import ScriptGenerator
 
-one_step_model = Train().get_one_step()
-states = None
-next_char = tf.constant(['Shrek:'])
-result = [next_char]
+# initialize web app
+app = Flask(__name__)
 
-for n in range(1000):
-    next_char, states = one_step_model.generate_one_step(next_char, states=states)
-    result.append(next_char)
+# initialize generator
+generator = ScriptGenerator()
 
-result = tf.strings.join(result)
-print(result[0].numpy().decode('utf-8'), '\n\n' + '_'*80)
+
+@app.route('/', methods=['GET', 'POST'])
+def home():
+    if request.method == 'POST':
+        script_title = request.form['script title']
+        first_words = request.form['first words']
+
+        generator.set_script_title(script_title)
+        generator.set_first_words(first_words)
+
+        return redirect(url_for('script'))
+
+    return render_template("home.html")
+
+
+@app.route('/script', methods=['GET', 'POST'])
+def script():
+    amazing_custom_script = generator.generate_script()
+    return render_template("script.html", movie_script=amazing_custom_script)
+
+
+if __name__ == '__main__':
+    app.run()
