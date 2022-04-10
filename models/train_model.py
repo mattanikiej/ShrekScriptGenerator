@@ -22,6 +22,8 @@ class Train:
             filepath=checkpoint_prefix,
             save_weights_only=True)
 
+        early_stopping = tf.keras.callbacks.EarlyStopping(patience=5, monitor='loss')
+
         self.model_.fit(self.model_.training_data_, epochs=epochs, verbose=1, callbacks=[checkpoint_callback])
 
     def get_one_step(self):
