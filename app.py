@@ -1,11 +1,11 @@
 from flask import Flask, render_template, request, redirect, url_for
 from script_generator import ScriptGenerator
 
-# initialize web app
-app = Flask(__name__)
-
 # initialize generator
 generator = ScriptGenerator()
+
+# initialize web app
+app = Flask(__name__)
 
 
 @app.route('/', methods=['GET', 'POST'])

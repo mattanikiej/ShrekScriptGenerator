@@ -26,3 +26,60 @@ input[type=submit]{
 h1.with-breaks {
     white-space: pre-wrap;
 }
+
+h1.home-page {
+    color: #9de718;
+    font-size: xxx-large;
+    text-shadow:
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000;
+}
+
+p.home-page {
+    color: #9de718;
+    font-size: large;
+    text-shadow:
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000;
+}
+
+.main {
+    display: inline-block;
+    width:50%;
+    background-color: darkolivegreen;
+}
+
+.left{
+    float:left;
+    left:0;
+    width:25%;
+    height:100%;
+    position: fixed;
+    background-image: url('assets/shrek_face.png');
+}
+
+.right{
+    float:right;
+    width:25%;
+    position: fixed;
+    height:100%;
+    background-image: url('assets/shrek_face.png');
+}
+
+.column {
+    padding: 10px;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+}
+
+.container div{
+    display: inline-block;
+    horiz-align: center;
+}

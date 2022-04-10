@@ -1,22 +1,38 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <link rel="stylesheet" href="../static/styles.css">
-  <head>
-    <meta charset="utf-8">
-    <title>Shrek Is Love</title>
-  </head>
-  <body>
-    <center>
-      <img src="../static/assets/scary_shrek.png" alt="Scary Shrek">
-      <h1> Shrek Script Generator </h1>
-      <p> Insert a movie title and Shrek's first words to the textboxes, and have this swampy AI generate a script! </p>
-      <form method="POST">
-        <input type="text" name="script title" maxlength="20" placeholder="Title">
-        <textarea  name="first words" max_length="200" placeholder="Shrek's first words"></textarea>
-        <div style="width:100%">
-          <input type="submit">
-        </div>
-      </form>
-    </center>
-  </body>
+   <style>
+      body {
+      background-image: url('../static/assets/shreks_swaps.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      }
+   </style>
+   <link rel="stylesheet" href="../static/styles.css">
+   <head>
+      <meta charset="utf-8">
+      <title>Shrek Is Love</title>
+   </head>
+   <body>
+      <center>
+         <img src="../static/assets/scary_shrek.png" alt="Scary Shrek">
+         <h1 class="home-page"> Shrek Script Generator </h1>
+         <p class="home-page"> Insert a movie title and Shrek's first words to the textboxes,
+            and have this swampy AI generate a script! <br> It might take a short while to generate after hitting submit
+         </p>
+         <form method="POST">
+            <input type="text" name="script title" maxlength="20" placeholder="Title">
+            <textarea  name="first words" max_length="200" placeholder="Shrek's first words"></textarea>
+            <div style="width:100%">
+               <input type="submit">
+            </div>
+         </form>
+         <p class="home-page"> You may be wondering why this looks absolutely awful? <br>
+            Well, Shrek 1-4 came out during the years 2001 - 2010 which just so happened to be the golden age of the internet
+            and websites that looked like this. <br>
+            So, I made it pretty much only using html like back in the day. <br>
+            Enjoy the nostalgia!
+         </p>
+      </center>
+   </body>
 </html>
