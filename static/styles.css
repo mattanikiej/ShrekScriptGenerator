@@ -22,3 +22,7 @@ input[type=submit]{
     width:20%;
     height:50px;
 }
+
+h1.with-breaks {
+    white-space: pre-wrap;
+}

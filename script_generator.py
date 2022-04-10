@@ -21,7 +21,7 @@ class ScriptGenerator():
         states = None
 
         # build initial data
-        initial_data = self.script_title + '\n' + 'SHREK:\n' + self.first_words
+        initial_data = self.script_title + '\nSHREK:\n' + self.first_words
         next_char = tf.constant([initial_data])
         result = [next_char]
 
@@ -32,7 +32,7 @@ class ScriptGenerator():
 
         # join characters
         result = tf.strings.join(result)
-        return result[0].numpy().decode('utf-8'), '\n\n' + '_' * 80 + '\n'
+        return result[0].numpy().decode('utf-8') + '\n\n' + '_' * 80 + '\n'
 
     def set_script_title(self, script_title):
         """
